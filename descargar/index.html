@@ -1,0 +1,134 @@
+    
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Búscame</title>
+        <meta name="description" content="App de busqueda de productos en Colombia">
+        <meta name="author" content="Miguel Rengifo y Luis Alvarez">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">       
+
+        <!-- iPhone -->
+        <link href="http://cdn.tapquo.com/lungo/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    
+        <!-- iPhone (Retina) -->
+        <link href="http://cdn.tapquo.com/lungo/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+
+        <!-- iPad -->
+        <link href="http://cdn.tapquo.com/lungo/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+
+        <!-- iPad (Retina) -->
+        <link href="http://cdn.tapquo.com/lungo/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="http://localhost/buscame/buscame/app/components/lungo/lungo.css">        
+        <link rel="stylesheet" href="http://localhost/buscame/buscame/app/components/lungo/lungo.icon.css">
+        <link rel="stylesheet" href="http://localhost/buscame/buscame/app/components/lungo/lungo.icon.brand.css">
+        <link rel="stylesheet" href="http://localhost/buscame/buscame/app/components/lungo/lungo.css">
+        <link rel="stylesheet" href="http://localhost/buscame/buscame/app/components/lungo/theme.lungo.css">
+        <link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body class="app">
+
+        <section id="section_descargar" data-transition="slide">           
+            <article id="article_descargar" class="active scroll">
+                <div id="content_descargar">
+                    <div id="contentInfo">
+                        <img id="imgLogoDescargar" src="http://buscameapp.com/img/buscame_letras.png">
+                        <p id="tituloDescargar">Bienvenido!</p>
+                        <p id="textDescargar">Descargar Búscame:</p>
+                    </div>
+                    <div id="contentBtnDescargar">
+                        <a href=""><img class="img_descargar" src="http://buscameapp.com/img/play-store.jpg"></a>
+                        <a href=""><img class="img_descargar" src="http://buscameapp.com/img/app-store.jpg"></a>
+                    </div>
+                    <div id="divBuscame">
+                         <a id="infoBuscame" href="http://www.buscameapp.com">¿No sabes que es Búscame? ven!</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <style type="text/css">
+            body {
+                color: #fff;
+            }
+
+            #article_descargar {
+                background-color: #29ABE3;
+            }
+
+            #content_descargar {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            #contentInfo {
+                width: 90%;
+                margin: 0 auto;
+                margin-bottom: 21%;
+            }
+
+            #tituloDescargar {
+                text-align: center;
+                color: #fff;
+                font-size: 1.6em;
+            }
+
+            #textDescargar {
+                float: left;
+                text-align: justify;
+                margin-top: 12%;
+            }            
+
+            #imgLogoDescargar {
+                text-align: center;
+                width: 40%;
+                margin-left: 30%;
+            }
+
+            #contentBtnDescargar {
+                width: 80%;
+                margin-top: 22%;
+                margin: 0 auto;
+            }
+
+            .img_descargar {
+                width: 48%;
+                display: inline-block;
+                margin: 0 auto;
+                border-radius: 7px;
+                margin-right: 1%;
+            }
+
+            #infoBuscame {
+                text-align: center;
+                text-decoration: underline;
+                color: #fff !important;
+            }
+
+            #divBuscame {
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                margin-top: 6%;
+            }
+        </style>
+        
+        <!-- Lungo - Dependencies -->
+        <script src="http://localhost/buscame/buscame/app/components/quojs/quo.js"></script>
+        <script src="http://localhost/buscame/buscame/app/components/lungo/lungo.js"></script>     
+        <script>
+            Lungo.init({
+                name: 'Búscame'
+            });            
+        </script>
+    </body>
+</html>
+

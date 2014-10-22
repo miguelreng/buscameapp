@@ -1,0 +1,720 @@
+    
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Búscame</title>
+        <meta name="description" content="App de busqueda de productos en Colombia">
+        <meta name="author" content="Miguel Rengifo">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="cleartype" content="on">       
+
+        <!-- iPhone 
+        <link href="http://cdn.tapquo.com/lungo/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    
+        <!-- iPhone (Retina) 
+        <link href="http://cdn.tapquo.com/lungo/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+
+        <!-- iPad 
+        <link href="http://cdn.tapquo.com/lungo/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+
+        <!-- iPad (Retina) 
+        <link href="http://cdn.tapquo.com/lungo/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="components/lungo/lungo.css">
+        <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+        <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+        <link rel="stylesheet" href="components/lungo/lungo.css">
+        <link rel="stylesheet" href="components/css/app.css">
+        <link rel="stylesheet" href="components/lungo/theme.lungo.css">
+    </head>
+
+    <body class="app">
+
+        <!-- Registro o Inicio de sesion -->
+        <section id="section_buscame_home" class="inicioSection">
+            <article id="article_home_buscame" class="active">
+                <div>
+                    <div id="content_buscame_home">
+                        <div id="logo_buscame_login">
+                            <img id="img_buscame_home" src="imagenes/buscame_letras.png">						     
+                        </div>
+                        <div id="form_acceder">
+                            <div id="form_sesion">
+                                <a href="#section_logeo" data-router="section" class="button anchor btn_inicio" >Ingresar</a>
+                            </div>
+
+                            <div id="form_registro">
+                                <a href="#section_registrarme" data-router="section" class="button anchor btn_inicio" >Registrarme</a>
+                            </div>                           
+                        </div>                                     
+                	</div>                
+                </div>
+            </article>
+        </section>
+
+        <!-- Registrarme -->
+        <section id="section_registrarme" data-transition="slide" class="inicioSection">
+            <article id="article_registrarme" class="active" >
+                <div class="scr">
+                    <ul>
+                        <li>
+                            <div class="box_back">
+                                <a href="#section_buscame_home" data-router="section" class="button btn_back_home"><span id="icon_left_home" class="icon chevron-left"></span></a>
+                            </div>
+                            <form id="form_registrarme" onSubmit="false">
+                                <img id="img_registro_logo" src="imagenes/buscame_letras.png">
+                                <input type="text" placeholder="Escribe tu nombre" class="inputRegistro" id="nombreRegistro">
+                                <input type="text" placeholder="Usuario" class="inputRegistro" id="usuarioRegistro">
+                                <input type="email" placeholder="Correo" class="inputRegistro" id="correoRegistro">
+                                <input type="password" placeholder="Contraseña" class="inputRegistro" id="contrasenaRegistro">                    
+                                <select class="custom inputRegistro" id="sexoRegistro">
+                                    <optgroup label="Sexo">
+                                        <option value="Masculino">Masculino </option>
+                                        <option value="Femenino">Femenino</option>
+                                    </optgroup>
+                                </select>                    
+                                <label>Imagen de perfil</label>
+                                <input name="imagen" id="imagen_registro" type="file"/>
+                                <a class="button" id="btn_img_registro" onclick="$('#imagen_registro').click();"><span id="icon_img" class="icon picture"></span></a>
+                                <div id="form_regis">
+                                    <a id="btn_registrarme" class="button anchor">
+                                        Registrar
+                                    </a>
+                                </div>            
+                            </form> 
+                        </li>       
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- Solicitud de gustos -->
+        <section id="carousel" data-transition="slide">
+            <article id="carousel-article" class="active block">
+                <div class="scr">
+                    <div class="div_info_intro" align="center">
+                        <p class="titulo_gustos" >Bienvenido a Búscame, Empezemos!</p>
+                       
+                        <p class="titulo_gustos_intro">&iquest;Qu&eacute; te gusta?</p>
+                        <div id="catRegistro">
+                            
+                        </div>
+                    </div>                    
+                </div>
+            </article>                        
+        </section>
+
+        <!-- Solicitud de gustos -->
+        
+        <section id="tiposSelect">
+            <article id="selectT" class="active block colorAzul">
+                <ul class="scr">
+                    <div class="div_info_intro" align="center">
+                      	<p class="titulo_gustos" >S&oacute;lo falta un paso, no te preocupes</p>
+                        <p class="titulo_gustos_intro">Selecciona los que te gusten</p>
+                        <div id="tipoRegistro">
+                            
+                        </div>
+                    </div>                    
+                </ul>
+            </article>                        
+        </section>
+
+        <section id="sectionColorRe">
+            <article id="article_intro_go" class="active">
+                <div id="contBtnCo" align="center">
+                    <div id="content_btn_intro">  
+                    	<p class="titulo_gustos" >&iexcl;Listo! Es el &uacute;ltimo paso.</p>
+                        <p class="titulo_gustos_intro">Selecciona el color que te gusta</p>
+                        
+                        <div id="colorRegistro">
+                        
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Inicio de Sesión -->
+
+        <section id="section_logeo" data-transition="slide" class="inicioSection">
+            <article id="article_logeo" class="active">
+                <div class="box_back">
+                    <a href="#section_buscame_home" data-router="section" class="button btn_back_home"><span id="icon_left_home_1" class="icon chevron-left"></span></a>
+                </div>
+                <form id="form_logeo" onSubmit="false">
+                    <img id="img_sesion_logo" src="imagenes/buscame_letras.png">
+                    <input type="text" placeholder="Usuario" class="inputIngreso" id="usuarioIngreso">
+                    <input type="password" placeholder="Contraseña" class="inputIngreso" id="contrasenaIngreso">
+                    <a id="btn_buscar_home" class="button anchor">Ingresar</a>
+                    <br>
+                    <a href="#section_remember" data-router="section" id="password_perdido">¿Olvidaste tu contraseña?</a>
+                </form>                
+            </article>
+        </section>
+
+        <!-- Recuperar contraseña -->
+        <section id="section_remember" data-transition="slide">                        
+            <article id="article_remember" class="active">
+                <div class="box_back"> 
+                    <a href="#section_logeo" data-router="section" class="button btn_back_home"><span id="icon_left_home_2"  class="icon chevron-left"></span></a>
+                </div>
+                <div id="box_remember">
+                	<form onSubmit="false">
+                        <p id="text_remember">Para recuperar tu contraseña escribe tu correo electronico</p>
+                        <input type="text" placeholder="Correo" id="remember_pass_email">
+                        <a id="btn_remember" class="button anchor">Recuperar contraseña</a>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <!-- Inicio -->
+        <section id="section_inicio" data-transition="slide">
+            <header class="header_nav" data-title="Inicio">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <article id="article_inicio" class="active">
+                <div id="content_inicio">
+                    <div id="welcome_message">
+                    </div>
+                    <div id="content_buscar_inicio">
+                        <div id="content_buscarGustos">
+                            <a class="button"><span  style="
+                                font-size: 1.3em !important;
+                                color: #fff !important;
+                            " class="icon thumbs-up"></span>Buscar mis gustos</a>
+                        </div>
+                        <div id="content_buscarNormal"> 
+                            <a data-router="section" class="button"><span style="
+                                font-size: 1.3em !important;
+                                color: #fff !important;
+                            " class="icon search"></span>Búsqueda normal</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+		
+        
+        <!-- Búsqueda con gustos -->
+        <section id="sectionGustos" data-transition="slide">
+        	<header class="header_nav" data-title="Búsqueda con mis gustos">
+                <nav>
+                    <a href="#section_inicio" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="wrappArtGustos" class="active" data-transition="slide"  style="padding:0;">
+           		<div id="articleGustos">
+                    <ul>
+                        <li></li>                
+                    </ul>
+              	</div>
+            </article>
+        </section>
+        
+        
+         <!-- Articulos gustos -->
+
+        <section id="sectionListGustos" data-transition="slide">
+            <header class="header_nav" data-title="Resultados gustos">
+                <nav>
+                    <a href="#sectionGustos" data-router="section" data-icon="chevron-left" class="left"></a>                    
+                </nav>            
+            </header>
+            <article id="wrappArtiGustos" class="active list indented wrapper">
+            	<div>
+                    <div id="wrappGustos"  style="padding:0;">
+                    </div>
+                    <div id="pullUpGus">
+                 	<span class="pullUpIconGus"></span><span class="pullUpLabelGus">Tire hacia arriba para cargar más...</span>
+                </div>
+                </div>
+            </article>
+        </section>
+        
+        <!--Vista gustos de productos -->
+        <section id="sectionProductosGustos" data-transition="slide">
+            <header class="header_nav" data-title="Producto">
+                <nav>
+                    <a href="#sectionListGustos" data-router="section" data-icon="chevron-left" class="left"></a>
+                    <a href="#right_aside" data-router="aside" data-icon="share" class="right"></a>                
+                </nav>            
+            </header>
+            <article id="wrapperProGus" class="active wrapper" style="padding:0;">
+               <div id="view_buscame_gustos">
+                 
+               </div>
+            </article>
+        </section>
+        
+        <!--Almacén gustos -->
+        <section id="section_almacen_gustos" data-transition="slide">
+            <header class="header_nav" data-title="Almacen">
+                <nav>
+                    <a href="#sectionProductosGustos" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="wrapperAlGus" class="active" style="padding:0;">
+               <div id="almacen_gustos">
+               
+               </div>                            
+            </article>
+              
+        </section>
+        
+        <!--CC gustos-->
+        <section id="sectionCCGustos" data-transition="slide">
+            <header class="header_nav" data-title="Centro Comercial">
+                <nav>
+                    <a href="#section_almacen_gustos" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="article_map" class="active">
+                <div id="wrappCCGus" class="wrapper" style="padding:0;top:0;">
+                    <div class="scroller">
+                        <div id="containerCCGustos">
+                        </div>
+                   </div>
+              </div>
+            </article>
+        </section>
+        
+        <!--Cómo llegar gustos-->
+        <section id="sectionLlegarGustos" data-transition="slide">
+            <article class="active">
+                <a href="#sectionCCGustos" data-router="section" class="button btn_back_maps"><span id="icon_left_maps" class="icon chevron-left"></span></a>
+                <div id="map-canvasGus">
+                </div>
+            </article>
+        </section>
+        
+        
+        <!-- Búsqueda convencional -->
+        <section id="form" data-transition="slide" class="">
+            <header class="header_nav" data-title="Búscame">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <article id="Intro" class="active indented ">                
+                <form id="form_buscar" onSubmit="false">  
+                	<div id="wrapper" class="wrapper">
+                        <div id="scroller" class="scroller"> 
+                            <ul>
+                                <li id="contentCategoria">
+                                    
+                                </li>
+                                
+                                <li id="contentTipo">
+                                    
+                                </li>
+            
+                                <!-- escoger almacenes dependiendo del cc -->
+                                <li id="contentProducto">
+                                </li>
+                                
+                                <li id="contentAlmacen">
+                                </li> 
+                            </ul>
+                        </div>
+                  	</div>
+                </form>
+            </article>
+        </section>
+
+        <!-- CC normal -->
+
+        <section id="section_cc" data-transition="slide">
+            <header class="header_nav" data-title="Centro Comercial">
+                <nav>
+                    <a href="#section_almacen" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="article_map" class="active">
+                <div id="wrappCC" class="wrapper" style="padding:0;top:0;">
+                    <div id="scrollerCC" class="scroller">
+                        <div id="container_info_cc">
+                        </div>
+                  	</div>
+             	</div>
+            </article>
+        </section>
+        
+        <!-- Cómo llegar normal -->
+
+        <section id="section_cc_llegar" data-transition="slide">
+            <article class="active">
+                 <a href="#section_cc" data-router="section" class="button btn_back_maps" ><span id="icon_left_maps" class="icon chevron-left"></span></a>
+                <div id="map-canvas">
+                </div>
+          	</article>
+        </section>
+
+
+        <!--- acerca de -->
+
+        <section id="acerca" data-transition="slide" >
+            <header class="header_nav" data-title="Acerca de Búscame">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <article id="about_buscame" class="active list indented ">
+                <ul>
+                    <li id="list_about">
+                        <div id="contentLogoEmpresa">
+                            <img src="http://localhost/buscame/buscame/app/imagenes/logo_sm.png" id="logo_empresa">
+                        </div>
+                        <p id="text_about">Búscame es una app móvil creada por ScriptMobile, se trata de una app móvil para buscar ropa y accesorios de manera eficiente y sencilla de acuerdo a tus gustos.</p>
+                        <p class="links_about" data-icon="brand twitter">@buscameapp</p>
+                        <p class="links_about" data-icon="brand facebook">/buscaloapp</p>
+                        <p class="links_about" data-icon="globe">www.buscameapp.com</p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+        
+        
+        <!-- Suscripciones -->
+
+        <section id="sectionSus" data-transition="slide">
+            <header class="header_nav" data-title="Suscripciones">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu" class="left"></a>                    
+                </nav>            
+            </header>
+            <article id="wrappSus" class="active list indented wrapper">
+            	<ul id="contentSus">
+                   
+                </ul>
+            </article>
+        </section>
+        
+
+        <!--- vista de resultados -->
+
+        <section id="result" data-transition="slide" >
+            <header class="header_nav" data-title="Resultados">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <nav class="groupbar">
+                <a href="#result_list" data-router="article" class="active">
+                    Todos
+                </a>
+                <a href="#result_list_promo" data-router="article" id="result_promo">
+                    En promoción
+                </a>
+                <a href="#result_list_menor" data-router="article" id="result_menor">
+                    Menor precio
+                </a>
+            </nav>
+            <article id="result_list" class="active list indented">
+                <div id="wrapper2" class="wrapper">
+                	<div id="scroller2" class="scroller">
+                		<ul id="list_products">
+
+                		</ul>
+                        
+                        <div id="pullUpAll">
+                            <span class="pullUpIconAll"></span><span class="pullUpLabelAll">Tire hacia arriba para actualizar...</span>
+                        </div>
+                  	</div>
+              	</div>
+            </article>
+            
+            <article id="result_list_promo" class="list indented ">
+                <div id="wrappPromo" class="wrapper">
+                	<div>
+                        <ul id="list_promo">
+    
+                        </ul>
+                    	<div id="pullUpProm">
+                            <span class="pullUpIconProm"></span><span class="pullUpLabelProm">Tire hacia arriba para actualizar...</span>
+                        </div>
+                  	</div>
+               	</div>
+            </article>
+            
+            <article id="result_list_menor" class="list indented">
+                <div id="wrappMenor" class="wrapper">
+                    <ul id="list_products_3">
+    
+                    </ul>
+               	</div>
+            </article>
+
+        </section>
+        
+        <!-- informacion de almacenes Búscame -->
+
+        <section id="section_almacen" data-transition="slide">
+            <header class="header_nav" data-title="Almacen">
+                <nav>
+                    <a href="#view_product_section" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="wrapper3" class="active">
+               <div id="article_almacen">
+               
+               </div>                            
+            </article>
+             	
+        </section>
+
+
+        <!-- Vista de cada producto -->
+
+        <section id="view_product_section" data-transition="slide">
+            <header class="header_nav" data-title="Producto">
+                <nav>
+                    <a href="#result" data-router="section" data-icon="chevron-left" class="left"></a>
+                    <a href="#right_aside" data-router="aside" data-icon="share" class="right"></a>                
+                </nav>            
+            </header>
+            <article id="wrapper4" class="active wrapper">
+               <div id="view_buscame_product">
+               		
+               </div>
+            </article>
+        </section>
+
+        <!-- Articulos me gusta -->
+
+        <section id="megustan_Article" data-transition="slide">
+            <header class="header_nav" data-title="Me gustan">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu" class="left"></a>                    
+                </nav>            
+            </header>
+            <article id="wrappArti" class="active list indented wrapper">
+            	<div>
+                    <div id="wrappLike">
+                    </div>
+                    <div id="pullUpMe">
+                 	<span class="pullUpIconMe"></span><span class="pullUpLabelMe">Tire hacia arriba para actualizar...</span>
+                </div>
+                </div>
+            </article>
+        </section>
+        
+        <!--Vista me gustan aproductos -->
+        <section id="view_product_section_megustan" data-transition="slide">
+            <header class="header_nav" data-title="Producto">
+                <nav>
+                    <a href="#megustan_Article" data-router="section" data-icon="chevron-left" class="left"></a>
+                    <a href="#right_aside" data-router="aside" data-icon="share" class="right"></a>                
+                </nav>            
+            </header>
+            <article id="wrapperProMe" class="active wrapper">
+               <div id="view_buscame_product_megustan">
+                 
+               </div>
+            </article>
+        </section>
+        
+        <!--Almacén me gustan -->
+        <section id="section_almacen_me_gustan" data-transition="slide">
+            <header class="header_nav" data-title="Almacen">
+                <nav>
+                    <a href="#view_product_section_megustan" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="wrapperAlMe" class="active">
+               <div id="almacen_megustan">
+               
+               </div>                            
+            </article>
+              
+        </section>
+        
+        <!--CC me gustan-->
+        <section id="section_cc_me_gustan" data-transition="slide">
+            <header class="header_nav" data-title="Centro Comercial">
+                <nav>
+                    <a href="#section_almacen_me_gustan" data-router="section" data-icon="chevron-left" class="left"></a>
+                </nav>
+            </header>
+            <article id="article_map" class="active">
+                <div id="wrappCCMe" class="wrapper" style="padding:0;top:0;">
+                    <div id="scrollerCC" class="scroller">
+                        <div id="container_info_ccM">
+                        </div>
+                   </div>
+              </div>
+            </article>
+        </section>
+        
+         <!--Cómo llegar me gustan-->
+        <section id="section_llegar_me_gustan" data-transition="slide">
+            <article class="active">
+            	<a href="#section_cc_me_gustan" data-router="section" class="button btn_back_maps" ><span id="icon_left_maps" class="icon chevron-left"></span></a>
+                <div id="map-canvasM">
+                </div>
+          	</article>
+        </section>
+        
+        <!-- Perfil -->
+
+        <section id="section_profile" data-transition="slide">
+            <header class="header_nav" data-title="Usuario">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <article class="active">
+                <div id="content_profile">
+                    <div id="header_profile">  
+                    </div>
+                    <div id="content_info_profile">
+                        <div id="div_img_profile">
+                        </div>
+                        <div id="div_name">
+                            <p id="name_user" ></p>       
+                            <div id="div_user">
+                                
+                            </div>
+                            <!--<div id="mis_gustos">
+                                <ul><label>Mis gustos</label>
+                                    <li>
+                                        <span class="icon heart">Camisetas</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="icon heart">Jeans</span>
+                                    </li>
+
+                                    <li>
+                                        <span class="icon heart">Gafas</span>
+                                    </li>
+                                </ul>                         
+                            </div>-->
+                            <div id="content_btnConfig">
+                                <a href="#section_configProfile" id="btnConfig" class="button anchor" data-router="section">Configuración <span id="icon_Config" class="icon cog"></span></a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Configuración perfil -->
+        <section id="section_configProfile" data-transition="slide">
+            <header class="header_nav" data-title="Configuración">
+                <nav>
+                    <a href="#features" data-router="aside" data-icon="menu"></a>
+                </nav>
+            </header>
+            <article id="article_configProfile" class="active">
+                <div id="content_configProfile">
+                     <form>
+                        <label class="label_intro">Cambiar usuario</label>
+                        <input type="text" placeholder="Usuario" class="" id="usuarioChange">                        
+                        <a href="#" id="btn_contraConfig" class="button">Cambiar contraseña<span id="icon_saveConfigContra" class="icon lock"></span></a>  
+                        <br>                      
+                        <label class="label_intro">Cambiar correo</label>
+                        <input type="email" placeholder="Correo" class="" id="correoChange">
+                        <a id="btn_configProfile" class="button anchor">Guardar cambios<span id="icon_saveConfig" class="icon save"></span></a>
+                    </form>
+                </div>
+            </article>
+        </section>
+
+        <!--- barra lateral -->
+        <aside id="features">
+            <header data-title="Menu">
+                <nav class="left">
+                    <a href="#features" data-router="aside" data-icon="menu"></a> 
+                </nav>
+            </header>
+            <article class="active list">
+                <ul>
+                    <li id="#">
+                        <a href="#section_inicio" id="#inicio_link" data-router="section" data-icon="home" class="text_lateral">
+                            <strong>Inicio</strong>
+                        </a>
+                    </li>                    
+                    <li id="#">
+                        <a href="#section_profile" data-router="section" data-icon="user" class="text_lateral">
+                            <strong>Mi perfil</strong>
+                        </a>
+                    </li>  
+                    <li id="likeArt">
+                        <a href="#megustan_Article" data-router="section" data-icon="icon thumbs-up" class="text_lateral">
+                            <strong>Me gustan</strong>
+                        </a>
+                    </li>
+
+                    <li id="listarSuscripciones">
+                        <a href="#sectionSus" data-router="section" data-icon="book" class="text_lateral">
+                            <strong>Suscripciones</strong>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#acerca" data-router="section" data-icon="info-sign" class="text_lateral">
+                            <strong>Acerca de Buscame</strong>
+                        </a>
+                    </li> 
+                    
+                    <li id="tapSalir">
+                        <a data-icon="off" class="text_lateral">
+                            <strong>Salir</strong>
+                        </a>
+                    </li>                    
+                </ul>
+            </article>
+        </aside>
+
+        <!-- aside de compartir -->
+
+        <aside id="right_aside" class="right small">
+            <header>
+                <nav>
+                </nav>
+            </header>
+            <article class="active list indented" >
+                <ul style="font-size: 1.2em;" id="shared" class="active">
+                       
+                </ul>
+            </article>            
+        </aside>
+        
+        <!--Scripts adicionales de sesion-->
+        <div id="divsAdicionales">
+        
+        </div>
+        
+        <!--Scripts adicionales de sesion-->
+        <div id="scriptsAdicionales">
+        
+        </div>
+        
+        <!-- Lungo - Dependencies -->
+        <script src="components/quojs/quo.js"></script>
+        <script src="components/lungo/lungo.js"></script>
+        <script src="components/js/jquery.min.js"></script>        
+        <script src="components/src/iscroll.js"></script>
+        <script src="components/js/iscroll-zoom.js"></script>
+        <!--Script de inicio-->        
+		<script src="components/js/events.js"></script>
+		<script src="components/js/inicio.js"></script>
+        <!-- Lungo - Sandbox App -->
+        <script>
+            Lungo.init({
+                name: 'Búscame'
+            });            
+        </script>
+    </body>
+</html>
+

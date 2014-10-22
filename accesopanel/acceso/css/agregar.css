@@ -1,0 +1,296 @@
+#contImg{
+	position: absolute;
+	margin-left: 400px;
+	margin-top: 50px;
+}
+#subfile{
+	width:160px;
+}
+.row .span6{
+	width:auto;
+}
+.jcrop-holder img{
+	background:#fff;
+}
+#checkImg2, #checkImg3 {
+	position: absolute;
+	margin-top: -21px;
+	margin-left: 100px;
+}
+.custom-input-file {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid #29ABE3;
+    border-radius: 5px;
+    background-color: #29ABE3;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: verdana;
+    font-size: 12pt;
+    width: 200px;
+    min-height: 40px;
+	margin-bottom:15px;
+}
+
+.custom-input-file .input-file {
+	position: absolute;
+	cursor: pointer;
+	height: 40px;
+	left: 0px;
+	width: 200px;
+	opacity: 0;
+	z-index: 0;
+}
+.custom-input-file .archivo {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 7pt;
+    overflow: hidden;
+}
+
+.contentImg{
+	border: 1px solid #29ABE3;
+	padding: 5px;
+	width: 500px;
+}
+.titleP{
+	font-size: 24px;
+	text-align: center;
+}
+body {
+	background-color: rgb(236, 236, 236);
+}
+a:hover{
+	list-style:none;
+	text-decoration:none;
+}
+
+#imgAlmacen{
+	height:100px;
+}
+
+.content_main {
+	height: 153px;
+	background-color: #29ABE3;
+	width: 160px;
+	transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-webkit-transition: all 1s ease-out;
+	border-radius: 183px;
+	display:inline-block;
+}
+
+.img_main {
+	width: 111px;
+	margin:20px;
+}
+
+.header_logo {
+	width: 76px;	
+	margin-left: 10px;
+}
+.header_cpanel {
+	margin: 0 auto;
+	width: 901px;
+	background-color: #29ABE3;
+	height: 61px;
+}
+
+#global_content {
+	margin: auto auto;
+	width: 900px;
+	background-color: #fff;
+	box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+	-webkit-box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+	-moz-box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+}
+
+#content_profile {
+	display: inline-block;
+	float: right;
+	color: #fff;
+	height: 61px;
+	transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-webkit-transition: all 1s ease-out;
+	padding-right: 40px;
+	padding-left: 20px;
+}
+#content_profile p{
+	text-align:center;
+	cursor:pointer;
+}
+#content_profile:hover {
+	background-color: rgb(89, 215, 226);
+}
+
+#content_profile:hover #window_profile {
+	display: block;
+}
+#window_profile {
+	z-index:9999;
+}
+.text_mark {
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+#img_mark_down {
+	width: 20px;
+	margin-top: -29px;
+	float: right;
+	margin-right: -25px;
+}
+
+#window_profile {
+	background-color: rgb(247, 247, 247);
+	display: inline-block;
+	width: 330px;
+	height: 130px;
+	margin-left: -225px;
+	margin-top: 10px;
+	display: none;
+	box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+	-webkit-box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+	-moz-box-shadow: 4px 3px 5px rgba(50, 50, 50, 0.19);
+	border-color: #29ABE3;
+	border-width: 1px;
+	border-style: solid;
+	position: absolute;
+}
+
+
+#window_profile_mark {
+	float: left;
+	margin-right: 72px;
+	margin-top: 15px;
+	position: absolute;
+	margin-left: 15px;
+	width: 160px;
+}
+
+#list_options_profile {
+	float: right;
+	margin-right: 40px;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #29ABE3;
+}
+#list_options_profile ul{
+	list-style:none;
+}
+#list_options_profile ul li label{
+	font-size:16px;	
+	line-height:30px;
+}
+#global_content{
+	min-height:600px;
+}
+#content_tabs {
+	margin-top: -37px;
+	overflow:hidden;
+	margin-bottom:40px;
+}
+
+#list_categories {
+	margin-left: 100px;
+}
+
+#form_agregar {
+	margin-left: 60px;
+	width: 500px;
+}
+
+#form_config {
+	margin-left: 60px;
+	width: 400px;
+}
+
+#div_price {
+	display: block;
+}
+
+#agregar_tab {
+	width: 880px;
+	margin-top:50px;
+}
+
+#text_footer {
+	text-align: center;
+	text-shadow: rgb(216, 216, 216) 2px 2px 4px;
+	color: rgb(148, 148, 148);
+}
+
+#editar_tab {
+	margin-left: 40px;
+}
+
+#eliminar_tab {
+	margin-left: 40px;
+}
+
+#configuracion {
+	margin-left: 40px;
+}
+
+.btn_edit {
+	width: 40px;
+	background: #29ABE3 !important;
+}
+
+.btn_remove {
+	width: 40px;
+	background: rgb(240, 77, 77) !important
+}
+
+.btn_nav {
+	color: #fff;
+}
+
+.btn_nav:hover {
+	color: black;
+}
+.btn_nav:active {
+	color: black;
+}
+
+#list_categories li i{
+	margin-right: 5px;
+}
+
+#content_phone {
+	width: 325px;
+	height: 625px;
+	background: url("http://localhost/buscame/accesopanel/acceso/images/skin.png");
+	background-size: 100% 100%;
+}
+
+#content_iframe {
+	width: 276px;
+	height: 478px;
+	position: absolute;
+	margin-top: 79px;
+	margin-left: 23px;
+	border: none;
+	OVERFLOW: auto;
+}
+
+#content_preview {
+	width: 450px;
+	position: absolute;
+	margin-left: 450px;
+	height: 500px;
+	margin-top: 25px;
+}
+#btnAgregar{
+	margin-top:20px;
+}
+.btnBlue{
+	background:#29ABE3;
+	color:#FFF;
+}
+#btnChangePass{
+	margin-bottom:10px;
+	margin-top:5px;
+}
